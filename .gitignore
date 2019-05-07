@@ -1,3 +1,8 @@
 __pycache__
 *.pyc
 *.pdf
+.Python
+bin/
+lib/
+include/
+pip-selfcheck.json
