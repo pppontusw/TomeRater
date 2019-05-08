@@ -86,7 +86,6 @@ class TomeRater():
   def __init__(self):
     self.users = {}
     self.books = {}
-    self.isbns_taken = []
 
   def __repr__(self):
     return """
@@ -96,10 +95,10 @@ class TomeRater():
     >""".format(users=self.users, books=self.books)
 
   def __eq__(self, other):
-    return (self.users == other.users and
-            self.books == other.books and
-            self.isbns_taken == other.isbns_taken
-           )
+    return (
+        self.users == other.users and
+        self.books == other.books
+        )
 
   def create_book(self, title, isbn, price):
     if not isbn in [i.isbn for i in self.books.keys()]:
